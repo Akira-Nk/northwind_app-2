@@ -1,0 +1,73 @@
+/* Black & White theme for Northwind Sales */
+:root{
+  --bg:#f7fbff;
+  --paper:#ffffff;
+  --muted:#616a75;
+  --text:#0b1724;
+  --blue-600:#0d6efd; /* primary */
+  --blue-700:#0a58ca;
+  --accent-2:#1f3a63;
+  --soft-border:#e6eef9;
+  --success:#0b7a3d;
+  --danger:#b31b1b;
+}
+
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600&display=swap');
+html,body{background:var(--bg);color:var(--text);font-family:'Noto Sans Thai', 'Segoe UI', Roboto, Arial, sans-serif;font-size:15px}
+
+a{color:var(--accent-2);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* Layout helpers */
+.container{max-width:1100px}
+.card{background:var(--paper);border:1px solid var(--soft-border);border-radius:12px;box-shadow:0 6px 18px rgba(15,15,15,0.04)}
+.card p{margin-bottom:0}
+.mb-4{margin-bottom:1.5rem!important}
+
+/* Navbar */
+.navbar-dark.bg-primary{background:linear-gradient(180deg,var(--blue-700) 0%, var(--blue-600) 100%)!important;border-radius:8px}
+.navbar .container-fluid{padding-left:0;padding-right:0}
+.navbar-brand{font-weight:600}
+.nav-link{color:rgba(255,255,255,0.92)!important}
+.nav-link.active{border-bottom:2px solid rgba(255,255,255,0.18);padding-bottom:.25rem}
+
+/* Alerts */
+.alert{border-radius:8px;padding:.75rem 1rem}
+
+/* Tables */
+.table{border-color:var(--soft-border);background:transparent}
+.table td,.table th{vertical-align:middle;border-top:1px solid var(--soft-border)}
+.table thead th{background:transparent;color:var(--muted);font-weight:600;border-bottom:2px solid var(--soft-border)}
+.table tbody tr:nth-child(odd){background:transparent}
+.table tbody tr:hover{background:rgba(0,0,0,0.03)}
+.table tfoot tr{background:#fbfbfb;font-weight:700}
+
+/* Buttons */
+.btn{border-radius:8px;padding:.48rem .75rem}
+.btn-primary{background:var(--blue-600);border-color:var(--blue-600);color:#fff}
+.btn-secondary{background:#fff;border:1px solid var(--soft-border);color:var(--accent-2)}
+.btn-outline-primary{background:transparent;border:1px solid rgba(13,110,253,0.18);color:var(--blue-700)}
+.btn-outline-danger{background:transparent;border:1px solid rgba(179,27,27,0.25);color:var(--danger)}
+.btn-sm{padding:.275rem .5rem}
+
+/* Forms */
+.form-control,.form-select{background:#fff;border:1px solid var(--soft-border);color:var(--text);border-radius:8px;padding:.5rem .75rem}
+.form-control:focus,.form-select:focus{border-color:var(--blue-700);box-shadow:0 8px 20px rgba(13,110,253,0.08)}
+
+/* Small card header style */
+.card h4{font-weight:600;margin-bottom:1rem}
+
+/* Item rows in edit form */
+.item-row .form-select{height:44px}
+.item-row .form-control{height:44px}
+.remove-row{line-height:1}
+
+/* Accessibility: focus */
+:focus{outline:3px solid rgba(43,43,43,0.12);outline-offset:2px}
+
+/* Print-friendly */
+@media print{
+  .navbar,.btn{display:none}
+  .table{border:1px solid #000}
+}
